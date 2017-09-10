@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vueapp</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div id="app">
+        
+        <md-table v-once>
+          <md-table-header>
+            <md-table-row>
+              <md-table-head>Nome</md-table-head>
+              <md-table-head>Escudo</md-table-head>              
+              <md-table-head>Nome</md-table-head>
+              <md-table-head>Gols Marcados</md-table-head>
+              <md-table-head>Gols Sofiridos</md-table-head>
+            </md-table-row>
+          </md-table-header>        
+          <md-table-body>
+            <md-table-row v-for="item in times">
+              <md-table-cell><span><img :src="item.escudo"></span> </md-table-cell>
+              <md-table-cell> {{ item.nome }} </md-table-cell>
+              <md-table-cell> 0 </md-table-cell>
+              <md-table-cell> 0 </md-table-cell>
+              <md-table-cell> 0 </md-table-cell>
+            </md-table-row>
+          </md-table-body>
+        </md-table>
+      
+    </div>
+  </body>
+</html>
